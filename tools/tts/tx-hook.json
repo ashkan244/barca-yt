@@ -1,0 +1,8 @@
+[
+  {"id": "tx-01", "voice": "am_michael", "speed": 1.0, "text": "Watch the back four. Not the ball."},
+  {"id": "tx-02", "voice": "am_michael", "speed": 1.05, "text": "He looks up. They step up."},
+  {"id": "tx-03", "voice": "am_michael", "speed": 1.05, "text": "One step, and the striker is offside."},
+  {"id": "tx-04", "voice": "am_michael", "speed": 1.0, "text": "But if one man hesitates, the whole line is open."},
+  {"id": "tx-05", "voice": "am_michael", "speed": 0.95, "text": "A weapon. And a gamble."},
+  {"id": "tx-06", "voice": "am_michael", "speed": 1.0, "text": "These are the tactics behind the Clásico."}
+]
