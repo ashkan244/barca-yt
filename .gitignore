@@ -4,3 +4,4 @@ studio/out/
 tools/node_modules/
 .env
 *.log
+studio/.audio-tmp/
