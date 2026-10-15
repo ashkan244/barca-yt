@@ -59,6 +59,14 @@ for (const s of scenes) {
   if (s._ids.length) s.lines = s._ids.length === 1 ? s._ids[0] : `${s._ids[0]}..${s._ids[s._ids.length - 1]}`;
   delete s._ids;
 }
+// validate required props per scene type (catches broken json blocks early)
+const REQUIRED = {board: ['tokens'], list: ['items'], timeline: ['events'], score: ['events'], compare: ['left', 'right'], bars: ['bars'], stat: ['value', 'label'],
+  statement: ['text'], chapter: ['title'], photo: ['src'], quote: ['text', 'who'], headline: ['headline'], map: ['from', 'to'], question: ['text'], title: ['title']};
+for (const [i, s] of scenes.entries()) {
+  for (const k of REQUIRED[s.type] ?? []) if (s[k] === undefined) throw new Error(`scene #${i + 1} (${s.type}) is missing "${k}"`);
+  if (!REQUIRED[s.type] && s.type !== 'endscreen') throw new Error(`scene #${i + 1}: unknown type ${s.type}`);
+}
+for (const l of narration) if (/^\\|`/.test(l.text)) throw new Error(`suspicious text in ${l.id}`);
 const spec = {...front, scenes};
 delete spec.voice;
 const specDir = path.join(root, 'studio/src/episodes/specs');

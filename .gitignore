@@ -5,3 +5,6 @@ tools/node_modules/
 .env
 *.log
 studio/.audio-tmp/
+studio/public/audio/*
+!studio/public/audio/hooktx/
+!studio/public/audio/hookfs/
