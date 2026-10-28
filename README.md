@@ -20,3 +20,7 @@
 2. کلید Gemini API + پلن ElevenLabs Creator در `.env`
 3. تأیید نام کانال (The Culer Files) و ساخت کانال
 4. سفارش تصویرسازی ۸ تا ۱۰ بازیکن (اختیاری، بعد از تست A/B تامبنیل)
+
+## Current production workflow
+
+Production code is maintained in [barca-yt-render](https://github.com/ashkan244/barca-yt-render). `tools/sync-render-repo.sh` now defaults to a dry-run and only accepts explicitly selected new files; it never deletes or overwrites render files. Use `--select studio/src/path/to/new-file.ts --apply` for additive imports. Conflicts require a deliberate code merge. Research and private production notes remain in this repository.
