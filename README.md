@@ -1,5 +1,7 @@
 # barca-yt — The Culer Files (کانال انگلیسی هواداران بارسا)
 
+> نقطهٔ شروع برای ادامهٔ تحقیق و تولید با Claude/Codex/Cloud: [راهنمای جامع Barça Radar](https://github.com/ashkan244/barca-yt-render/blob/main/CLOUD_GUIDE.fa.md). شامل وضعیت واقعی، همهٔ تحقیقات بصری و MCP، بررسی ادیتورهای متن‌باز، دستورهای اجرا و کارهای بعدی است.
+
 ## اسناد (به ترتیب خواندن)
 1. [research/03-final-model.md](research/03-final-model.md) — **مدل نهایی:** هویت، فرمت‌ها، ریتم، ۱۲ ویدیوی اول، احتمال موفقیت، شاخص‌ها
 2. [research/04-requirements.md](research/04-requirements.md) — **نیازمندی‌ها در ۹ سطح** با اولویت و معیار پذیرش
