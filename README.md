@@ -15,12 +15,14 @@
 - `tools/` — سازنده‌ی شیت‌ها (exceljs)
 - `assets/photos/` — عکس‌های آزاد + `licenses.tsv`
 
-## قدم‌های بعدی (نیاز به شما)
+## قدم‌های بعدیِ طرح اولیه (تاریخی؛ وضعیت جاری در پایین)
 1. ساخت مخزن GitHub (عمومی = دقیقه‌های رایگان) و push این پوشه، سپس اجرای اولین رندر ابری برای اندازه‌گیری سرعت
 2. کلید Gemini API + پلن ElevenLabs Creator در `.env`
 3. تأیید نام کانال (The Culer Files) و ساخت کانال
 4. سفارش تصویرسازی ۸ تا ۱۰ بازیکن (اختیاری، بعد از تست A/B تامبنیل)
 
-## Current production workflow
+## مسیر تولید جاری — ۲۸ اکتبر ۲۰۲۶
 
-Production code is maintained in [barca-yt-render](https://github.com/ashkan244/barca-yt-render). `tools/sync-render-repo.sh` now defaults to a dry-run and only accepts explicitly selected new files; it never deletes or overwrites render files. Use `--select studio/src/path/to/new-file.ts --apply` for additive imports. Conflicts require a deliberate code merge. Research and private production notes remain in this repository.
+کد تولید در [barca-yt-render](https://github.com/ashkan244/barca-yt-render) مرجع است. این مخزن تحقیق و طرح‌های اولیه را نگه می‌دارد. ابزار `tools/sync-render-repo.sh` پیش‌فرض dry-run است و فقط فایل جدید انتخاب‌شده را منتقل می‌کند؛ فایل موجود حذف یا بازنویسی نمی‌شود. گزینهٔ `--select studio/src/path/to/new-file.ts --apply` برای افزودن انتخابی است؛ تعارض با merge عمدی حل می‌شود.
+
+[راهنمای عکس‌های تازه و چهرهٔ بازیکنان](https://github.com/ashkan244/barca-yt-render/blob/main/docs/video-production/photographic-production.fa.md) شامل منابع، حقوق عکس، جست‌وجوی آنلاین و قالب‌های تصویری است. [وضعیت اجرای ارتقاها](https://github.com/ashkan244/barca-yt-render/blob/main/docs/video-production/implementation-2026-10-28.fa.md) قابلیت پیاده‌شده را از پیشنهاد جدا می‌کند. مدل مولد یا اشتراک خبری برای استفاده از بانک عکس فعلی لازم نیست؛ رسانه و مجوز هر قسمت باید تأمین شود.

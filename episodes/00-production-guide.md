@@ -87,15 +87,18 @@ cd tools/tts && node say.mjs PL.json ../../studio/public/audio/PL
 # 4) پیش‌نمایش و تک‌فریم محلی
 cd studio && npx remotion still src/index.ts EP-PL out/check/PL_0900.jpg --frame=900
 
-# 5) همگام‌سازی با مخزن عمومی و رندر ابری (۸ تا ۱۲ جوین موازی برای ویدیوی بلند)
-bash tools/sync-render-repo.sh && cd ../barca-yt-render && git add -A && git commit -m "EP-PL" && git push
-gh workflow run render.yml -f composition=EP-PL -f chunks=10 -f crf=20
+# 5) کد تولید مستقیماً در barca-yt-render نگهداری می‌شود.
+# انتقال اختیاری فقط برای فایل جدیدِ مشخص، از ریشهٔ barca-yt:
+# bash tools/sync-render-repo.sh --select studio/src/episodes/NEW/episode.tsx
+# پس از بررسی dry-run، همان دستور با --apply فایل تازه را اضافه می‌کند.
+# فایل موجود overwrite نمی‌شود؛ تعارض باید با merge عمدی حل شود.
+# در barca-yt-render تغییرات مشخص را بررسی/commit/push و workflow مناسب قسمت را اجرا کن.
 
 # 6) دانلود خروجی
 gh run download <run-id> -R ashkan244/barca-yt-render -n EP-PL -D studio/out/cloud
 ```
 
-**برآورد رندر ابری** (۷ فریم بر ثانیه برای هر جوین، اندازه‌گیری‌شده): ویدیوی ۱۰ دقیقه‌ای با ۱۰ جوین حدود ۵ دقیقه، و FS سی‌ودودقیقه‌ای با ۱۲ جوین حدود ۱۵ دقیقه.
+**برآورد تاریخی رندر ابری، تأییدنشده برای مسیر تولید فعلی** (فرض۷فریم بر ثانیه برای هر جوین): ویدیوی ۱۰ دقیقه‌ای با ۱۰ جوین حدود ۵ دقیقه، و FS سی‌ودودقیقه‌ای با ۱۲ جوین حدود ۱۵ دقیقه.
 
 ## ۷. کنترل کیفیت (قبل از انتشار)
 
